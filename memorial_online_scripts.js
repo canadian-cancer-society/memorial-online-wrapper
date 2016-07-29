@@ -53,7 +53,7 @@ function initiate() {
 
             inputHonoreeFullname.val(honoreeFullname);
             inputHonoreeFullname.style.display = "none";
-            //
+            // s
             console.log("------> Input Not Null");
         }
 
