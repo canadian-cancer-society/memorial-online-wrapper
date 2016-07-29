@@ -54,6 +54,10 @@ h1,h2,h3{
     .donation-level-container .form-content {
         width: 30%;
     }
+
+    .donation-level-container .user-entered-level .form-content {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 736px) {
