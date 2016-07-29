@@ -55,8 +55,9 @@ h1,h2,h3{
         width: 30%;
     }
 
-    .donation-level-container .user-entered-level .form-content {
-        width: 100%;
+    .user-entered-level .form-content,
+    .donation-level-container.user-entered-level .form-content {
+        width: 100% !important;
     }
 }
 
