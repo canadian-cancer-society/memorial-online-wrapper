@@ -50,7 +50,7 @@ function initiate() {
     var honoreeFullname = GetURLParameter("moPersonFullname");
     var initialLabelValue = document.getElementById("tribute_honoree_label").value;
 
-    if (honoreeFullname != null) {
+    if ( honoreeFullname != null && honoreeFullname.length > 0 ) {
 
         if (inputHonoreeFullname != null) {
 
