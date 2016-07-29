@@ -51,8 +51,10 @@ function initiate() {
 
         if (inputHonoreeFullname != null) {
             //inputHonoreeFullname.val(honoreeFullname);
-            inputHonoreeFullname.hide();
+            
             console.log("------> Input Not Null");
+
+            inputHonoreeFullname.style.display = "none";
         }
         //if (inputHonoreeFullnameLabel != null) {
         //    inputHonoreeFullnameLabel.text(honoreeFullname);
@@ -60,7 +62,7 @@ function initiate() {
     }
     else {
         if (inputHonoreeFullname != null) {
-            inputHonoreeFullname.show();
+            inputHonoreeFullname.style.display = "block";
         }
 
     }

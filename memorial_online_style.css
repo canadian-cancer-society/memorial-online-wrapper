@@ -67,3 +67,21 @@ h1,h2,h3{
         margin-right:5px;
     }
 }
+
+label.button-style {
+    display: block;
+    width: 155px;
+    min-height: 43px;
+    text-align: center;
+    color: #fff;
+    background-color: #0179c1;
+    font-family: 'Dax Bold';
+    font-size: 18px;
+    line-height: 1.2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    word-wrap: break-word;
+    padding: 10px 0px;
+}
