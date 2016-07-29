@@ -14,10 +14,11 @@ $('#level_standardexpanded41360amount').keypress(function (event) {
     if (event.which <= 46 || event.which > 59) {
         event.preventDefault();
     }
+    console.log("------> Key Press");
 });
 $('#level_standardexpanded41360amount').bind('blur', function (e) {
     if ($(this).val().length > 0) $(this).val(parseFloat($(this).val()).toFixed(2));
-
+    console.log("------> Bind");
 });
 
 function GetURLParameter(sParam) {
@@ -31,7 +32,32 @@ function GetURLParameter(sParam) {
     }
 }
 
-console.log("------> Lanaguage = "+GetURLParameter("s_locale"));
-console.log("------> Company = "+GetURLParameter("s_orgGift"));
-console.log("------> Photo = "+GetURLParameter("moPersonImage"));
-console.log("------> Full Name = "+GetURLParameter("moPersonFullname"));
+var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
+var inputHonoreeFullnameLabel = inputHonoreeFullname.previousSibling;
+var honoreeFullname = GetURLParameter("moPersonFullname");
+
+console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
+console.log("------> Company = " + GetURLParameter("s_orgGift"));
+console.log("------> Photo = " + GetURLParameter("moPersonImage"));
+console.log("------> Full Name = " + GetURLParameter("moPersonFullname"));
+
+if ( honoreeFullname != null)
+{
+    
+    if (inputHonoreeFullname != null )
+    {
+        inputHonoreeFullname.value = honoreeFullname;
+        inputHonoreeFullname.style.display = "none";
+    }
+    if (inputHonoreeFullnameLabel != null )
+    {
+        inputHonoreeFullnameLabel.innerHTML = honoreeFullname;
+    }
+}
+else
+{
+    if (inputHonoreeFullname != null) {
+        inputHonoreeFullname.style.display = "block";
+    }
+    
+}
