@@ -22,7 +22,7 @@ function GetURLParameter(sParam)
             return sParameterName[1];
         }
     }
-}​
+}​;
 
 console.log("------> Lanaguage = "+GetURLParameter("s_locale"));
 console.log("------> Company = "+GetURLParameter("s_orgGift"));
