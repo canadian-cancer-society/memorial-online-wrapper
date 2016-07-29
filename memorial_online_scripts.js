@@ -32,7 +32,9 @@ function GetURLParameter(sParam) {
     }
 }
 
-document.onload = function () {
+document.onload = initiate;
+
+function initiate() {
 
     console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
     console.log("------> Company = " + GetURLParameter("s_orgGift"));
