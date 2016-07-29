@@ -32,33 +32,37 @@ function GetURLParameter(sParam) {
     }
 }
 
-//var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
-var inputHonoreeFullname = $("#tribute_honoree_namename");
-var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parent().parent().parent().find(".section-header-container")[1];
-var honoreeFullname = GetURLParameter("moPersonFullname");
+document.onload = function () {
 
-console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
-console.log("------> Company = " + GetURLParameter("s_orgGift"));
-console.log("------> Photo = " + GetURLParameter("moPersonImage"));
-console.log("------> Full Name = " + GetURLParameter("moPersonFullname"));
+    //var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
+    var inputHonoreeFullname = $("#tribute_honoree_namename");
+    var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parent().parent().parent().find(".section-header-container")[1];
+    var honoreeFullname = GetURLParameter("moPersonFullname");
 
-if ( honoreeFullname != null)
-{
-    
-    if (inputHonoreeFullname != null )
-    {
-        inputHonoreeFullname.value = honoreeFullname;
-        inputHonoreeFullname.style.display = "none";
+
+
+    console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
+    console.log("------> Company = " + GetURLParameter("s_orgGift"));
+    console.log("------> Photo = " + GetURLParameter("moPersonImage"));
+    console.log("------> Full Name = " + GetURLParameter("moPersonFullname"));
+
+    if (honoreeFullname != null) {
+
+        if (inputHonoreeFullname != null) {
+            inputHonoreeFullname.value = honoreeFullname;
+            inputHonoreeFullname.style.display = "none";
+        }
+        if (inputHonoreeFullnameLabel != null) {
+            inputHonoreeFullnameLabel.innerText = honoreeFullname;
+        }
     }
-    if (inputHonoreeFullnameLabel != null )
-    {
-        inputHonoreeFullnameLabel.innerText = honoreeFullname;
+    else {
+        if (inputHonoreeFullname != null) {
+            inputHonoreeFullname.style.display = "block";
+        }
+
     }
+
+
 }
-else
-{
-    if (inputHonoreeFullname != null) {
-        inputHonoreeFullname.style.display = "block";
-    }
-    
-}
+
