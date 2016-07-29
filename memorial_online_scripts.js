@@ -43,7 +43,7 @@ function initiate() {
 
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
     //var inputHonoreeFullname = $("#tribute_honoree_namename");
-    var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parentNode.parentNode.parentNode.getElementsByClassName(".section-header-container")[1];
+    var inputHonoreeFullnameLabel = inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName(".section-header-container")[1];
     var honoreeFullname = GetURLParameter("moPersonFullname");
 
 
