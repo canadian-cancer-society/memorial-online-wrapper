@@ -1,14 +1,18 @@
 ﻿// Canadian Cancer Society
 
-window.addEventListener('message', function(event) {
-    if (~event.origin.indexOf('http://localhost:57072')) {
-        var frame = event.data;
-        frame.height = document.documentElement.scrollHeight;
-        console.log("-------->Scroll Height"+document.documentElement.scrollHeight);
-    } else {
-        return;
-    }
-});
+
+// Initialize tha page
+window.onload = initiate;
+
+//window.addEventListener('message', function(event) {
+//    if (~event.origin.indexOf('http://localhost:57072')) {
+//        var frame = event.data;
+//        frame.height = document.documentElement.scrollHeight;
+//        console.log("-------->Scroll Height"+document.documentElement.scrollHeight);
+//    } else {
+//        return;
+//    }
+//});
 
 $('#level_standardexpanded41360amount').keypress(function (event) {
     if (event.which <= 46 || event.which > 59) {
@@ -21,6 +25,7 @@ $('#level_standardexpanded41360amount').bind('blur', function (e) {
     console.log("------> Bind");
 });
 
+//
 function GetURLParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
@@ -32,8 +37,7 @@ function GetURLParameter(sParam) {
     }
 }
 
-window.onload = initiate;
-
+//
 function initiate() {
 
     console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
@@ -51,7 +55,7 @@ function initiate() {
 
         if (inputHonoreeFullname != null) {
 
-            inputHonoreeFullname.val(honoreeFullname);
+            inputHonoreeFullname.value = honoreeFullname;
             inputHonoreeFullname.style.display = "none";
             // s
             console.log("------> Input Not Null");
