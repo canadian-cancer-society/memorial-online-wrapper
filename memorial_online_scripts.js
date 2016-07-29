@@ -41,21 +41,22 @@ function initiate() {
     console.log("------> Photo = " + GetURLParameter("moPersonImage"));
     console.log("------> Full Name = " + GetURLParameter("moPersonFullname"));
 
-    //var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
-    var inputHonoreeFullname = $("#tribute_honoree_namename");
-    var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parent().parent().parent().find(".section-header-container")[1];
+    var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
+    //var inputHonoreeFullname = $("#tribute_honoree_namename");
+    //var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parent().parent().parent().find(".section-header-container")[1];
     var honoreeFullname = GetURLParameter("moPersonFullname");
 
 
     if (honoreeFullname != null) {
 
         if (inputHonoreeFullname != null) {
-            inputHonoreeFullname.val(honoreeFullname);
+            //inputHonoreeFullname.val(honoreeFullname);
             inputHonoreeFullname.hide();
+            console.log("------> Input Not Null");
         }
-        if (inputHonoreeFullnameLabel != null) {
-            inputHonoreeFullnameLabel.text(honoreeFullname);
-        }
+        //if (inputHonoreeFullnameLabel != null) {
+        //    inputHonoreeFullnameLabel.text(honoreeFullname);
+        //}
     }
     else {
         if (inputHonoreeFullname != null) {
