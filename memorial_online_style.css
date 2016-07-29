@@ -6,3 +6,7 @@ div.responsive .donation-level-input-container label {
 h1,h2,h3{
     color: #333;
 }
+
+.styled-select {
+    background: url(../img/dropdown_bg_dark.png) no-repeat 100% 0;
+}
