@@ -32,8 +32,9 @@ function GetURLParameter(sParam) {
     }
 }
 
-var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
-var inputHonoreeFullnameLabel = inputHonoreeFullname.previousSibling;
+//var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
+var inputHonoreeFullname = $("#tribute_honoree_namename");
+var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parent().parent().parent().find(".section-header-container")[1];
 var honoreeFullname = GetURLParameter("moPersonFullname");
 
 console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
@@ -51,7 +52,7 @@ if ( honoreeFullname != null)
     }
     if (inputHonoreeFullnameLabel != null )
     {
-        inputHonoreeFullnameLabel.innerHTML = honoreeFullname;
+        inputHonoreeFullnameLabel.innerText = honoreeFullname;
     }
 }
 else
