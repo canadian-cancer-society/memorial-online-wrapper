@@ -71,6 +71,7 @@ h1,h2,h3{
 label.button-style {
     display: block;
     min-height: 43px;
+    height: auto;
     text-align: center;
     color: #fff;
     background-color: #0179c1;
