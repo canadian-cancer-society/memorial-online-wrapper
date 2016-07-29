@@ -32,7 +32,7 @@ function GetURLParameter(sParam) {
     }
 }
 
-document.onload = initiate;
+window.onload = initiate;
 
 function initiate() {
 
@@ -50,16 +50,16 @@ function initiate() {
     if (honoreeFullname != null) {
 
         if (inputHonoreeFullname != null) {
-            inputHonoreeFullname.value = honoreeFullname;
-            inputHonoreeFullname.style.display = "none";
+            inputHonoreeFullname.val(honoreeFullname);
+            inputHonoreeFullname.hide();
         }
         if (inputHonoreeFullnameLabel != null) {
-            inputHonoreeFullnameLabel.innerText = honoreeFullname;
+            inputHonoreeFullnameLabel.text(honoreeFullname);
         }
     }
     else {
         if (inputHonoreeFullname != null) {
-            inputHonoreeFullname.style.display = "block";
+            inputHonoreeFullname.show();
         }
 
     }
