@@ -3,6 +3,35 @@ div.responsive .donation-level-input-container label {
     background-color: #333;
 }
 
+div.responsive .donation-level-input-container label:hover, div.responsive .donation-level-input-container label.active {
+    background-color: #ffde00;
+    color: #333;
+}
+
+div.responsive .donation-level-input-container label.unselected:hover, label.button-style.unselected:hover {
+    background-color: #ffe01a;
+    color: #333;
+}
+
+label.button-style:hover, label.button-style.active {
+    background-color: #ffde00;
+    color: #333;
+}
+
+div.responsive button.action-button {
+    /* border: 1px solid #ffde00; */
+    border: none;
+    background-color: #ffde00;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffde00', endColorstr='#ffde00');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffde00', endColorstr='#ffde00')";
+    background-image: -ms-linear-gradient(top, #ffde00, #ffde00);
+    background-image: -webkit-linear-gradient(top, #ffde00, #ffde00);
+    background-image: -moz-linear-gradient(top, #ffde00, #ffde00);
+    background-image: -o-linear-gradient(top, #ffde00, #ffde00);
+    background-image: linear-gradient(top, #ffde00, #ffde00);
+    color:#333;
+}
+
 h1,h2,h3{
     color: #333;
 }
