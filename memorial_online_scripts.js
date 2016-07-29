@@ -46,10 +46,9 @@ function initiate() {
     console.log("------> Full Name = " + GetURLParameter("moPersonFullname"));
 
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
-    //var inputHonoreeFullname = $("#tribute_honoree_namename");
     var inputHonoreeFullnameLabel = inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName("section-header-container")[1];
     var honoreeFullname = GetURLParameter("moPersonFullname");
-
+    var initialLabelValue = document.getElementById("tribute_honoree_label").value;
 
     if (honoreeFullname != null) {
 
@@ -63,7 +62,7 @@ function initiate() {
 
         if (inputHonoreeFullnameLabel != null) {
             console.log("------> Label Not Null");
-            inputHonoreeFullnameLabel.innerText = honoreeFullname;
+            inputHonoreeFullnameLabel.innerText = initialLabelValue + " " + honoreeFullname;
         }
     }
     else {
