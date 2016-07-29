@@ -34,17 +34,16 @@ function GetURLParameter(sParam) {
 
 document.onload = function () {
 
+    console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
+    console.log("------> Company = " + GetURLParameter("s_orgGift"));
+    console.log("------> Photo = " + GetURLParameter("moPersonImage"));
+    console.log("------> Full Name = " + GetURLParameter("moPersonFullname"));
+
     //var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
     var inputHonoreeFullname = $("#tribute_honoree_namename");
     var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parent().parent().parent().find(".section-header-container")[1];
     var honoreeFullname = GetURLParameter("moPersonFullname");
 
-
-
-    console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
-    console.log("------> Company = " + GetURLParameter("s_orgGift"));
-    console.log("------> Photo = " + GetURLParameter("moPersonImage"));
-    console.log("------> Full Name = " + GetURLParameter("moPersonFullname"));
 
     if (honoreeFullname != null) {
 
