@@ -1,3 +1,8 @@
-﻿body
-{
+﻿
+div.responsive .donation-level-input-container label {
+    background-color: #333;
+}
+
+h1,h2,h3{
+    color: #333;
 }
