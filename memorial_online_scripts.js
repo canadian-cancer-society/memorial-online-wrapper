@@ -43,22 +43,23 @@ function initiate() {
 
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
     //var inputHonoreeFullname = $("#tribute_honoree_namename");
-    //var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parent().parent().parent().find(".section-header-container")[1];
+    var inputHonoreeFullnameLabel = $("#tribute_honoree_namename").parentNode.parentNode.parentNode.getElementsByClassName(".section-header-container")[1];
     var honoreeFullname = GetURLParameter("moPersonFullname");
 
 
     if (honoreeFullname != null) {
 
         if (inputHonoreeFullname != null) {
-            //inputHonoreeFullname.val(honoreeFullname);
-            
-            console.log("------> Input Not Null");
 
+            inputHonoreeFullname.val(honoreeFullname);
             inputHonoreeFullname.style.display = "none";
+
+            console.log("------> Input Not Null");
         }
-        //if (inputHonoreeFullnameLabel != null) {
-        //    inputHonoreeFullnameLabel.text(honoreeFullname);
-        //}
+
+        if (inputHonoreeFullnameLabel != null) {
+             inputHonoreeFullnameLabel.innerText = honoreeFullname;
+        }
     }
     else {
         if (inputHonoreeFullname != null) {
