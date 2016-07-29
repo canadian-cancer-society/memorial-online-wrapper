@@ -84,4 +84,5 @@ label.button-style {
     margin-top: 10px;
     word-wrap: break-word;
     padding: 10px 0px;
+    cursor:pointer;
 }
