@@ -47,7 +47,7 @@ function initiate() {
 
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
     var inputHonoreeFullnameLabel = inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName("section-header-container")[1];
-    var honoreeFullname = GetURLParameter("moFirstName") + " " + GetURLParameter("moLastName") ;
+    var honoreeFullname = decodeURI( GetURLParameter("moFirstName") ) + " " + decodeURI( GetURLParameter("moLastName") );
     var initialLabelValue = document.getElementById("tribute_honoree_label").value;
 
     if ( honoreeFullname != null && honoreeFullname.length > 0 ) {
