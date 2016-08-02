@@ -86,3 +86,7 @@ label.button-style {
     padding: 10px 0px;
     cursor:pointer;
 }
+
+h2 strong, h2.cstmTitle strong, .content h2 strong, .content table h2 strong, .content tr h2 strong, .content th h2 strong, .content td h2 strong {
+    color: #333;
+}
