@@ -43,11 +43,11 @@ function initiate() {
     console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
     console.log("------> Company = " + GetURLParameter("s_orgGift"));
     console.log("------> Photo = " + GetURLParameter("moPersonImage"));
-    console.log("------> Full Name = " + GetURLParameter("moPersonFullname"));
+    console.log("------> Full Name = " + GetURLParameter("moFirstName") + " " + GetURLParameter("moLastName"));
 
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
     var inputHonoreeFullnameLabel = inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName("section-header-container")[1];
-    var honoreeFullname = GetURLParameter("moPersonFullname");
+    var honoreeFullname = GetURLParameter("moFirstName") + " " + GetURLParameter("moLastName") ;
     var initialLabelValue = document.getElementById("tribute_honoree_label").value;
 
     if ( honoreeFullname != null && honoreeFullname.length > 0 ) {
