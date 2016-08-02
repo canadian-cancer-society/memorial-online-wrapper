@@ -52,7 +52,7 @@ function initiate() {
 
     if ( GetURLParameter("moFirstName") != null && GetURLParameter("moLastName") != null )
     {
-        console.log("------> Paramters Not Null");
+        console.log("------> Parameters Not Null");
         honoreeFullname = decodeURI( GetURLParameter("moFirstName") ) + " " + decodeURI( GetURLParameter("moLastName") );
     }
 
