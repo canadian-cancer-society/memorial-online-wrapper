@@ -43,17 +43,17 @@ function initiate() {
     console.log("------> Lanaguage = " + GetURLParameter("s_locale"));
     console.log("------> Company = " + GetURLParameter("s_orgGift"));
     console.log("------> Photo = " + GetURLParameter("moPersonImage"));
-    console.log("------> Full Name = " + GetURLParameter("moFirstName") + " " + GetURLParameter("moLastName"));
+    console.log("------> Full Name = " + GetURLParameter("fullName"));
 
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
     var inputHonoreeFullnameLabel = inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName("section-header-container")[1];
     var honoreeFullname = null;
     var initialLabelValue = document.getElementById("tribute_honoree_label").value;
 
-    if ( GetURLParameter("moFirstName") != null && GetURLParameter("moLastName") != null )
+    if (GetURLParameter("fullName") != null )
     {
         console.log("------> Parameters Not Null");
-        honoreeFullname = decodeURI( GetURLParameter("moFirstName") ) + " " + decodeURI( GetURLParameter("moLastName") );
+        honoreeFullname = decodeURI( GetURLParameter("fullName") );
     }
 
     if ( honoreeFullname != null && honoreeFullname.length > 0 ) {
