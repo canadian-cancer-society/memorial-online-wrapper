@@ -55,10 +55,10 @@ function initiate() {
     if (GetURLParameter("fullName") != null )
     {
         //console.log("------> Parameters Not Null");
-        honoreeFullname = decodeURI(GetURLParameter("fullName"));
+        honoreeFullname = decodeURIComponent(GetURLParameter("fullName"));
 
         virtual_memorial_portrait_id.value = (GetURLParameter("portrait_id") != null) ? GetURLParameter("portrait_id") : null;
-        virtual_memorial_portrait_url.value = (GetURLParameter("portrait_url") != null) ? decodeURI(GetURLParameter("portrait_url")) : null;
+        virtual_memorial_portrait_url.value = (GetURLParameter("portrait_url") != null) ? decodeURIComponent(GetURLParameter("portrait_url")) : null;
     }
 
     if ( honoreeFullname != null && honoreeFullname.length > 0 ) {
