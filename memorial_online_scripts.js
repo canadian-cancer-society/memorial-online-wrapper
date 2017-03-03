@@ -73,7 +73,7 @@ function initiate() {
 
         if (inputHonoreeFullnameLabel != null) {
             console.log("------> Label Not Null");
-            inputHonoreeFullnameLabel.innerHTML = initialLabelValue + " <strong>" + honoreeFullname + "</strong>";
+            inputHonoreeFullnameLabel.innerHTML = initialLabelValue + "<br /><strong>" + honoreeFullname + "</strong>";
         }
     }
     else {
