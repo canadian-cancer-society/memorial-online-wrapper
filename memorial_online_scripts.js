@@ -45,15 +45,23 @@ function initiate() {
     console.log("------> Photo = " + GetURLParameter("moPersonImage"));
     console.log("------> Full Name = " + GetURLParameter("fullName"));
 
+    var virtual_memorial_portrait_id = document.getElementById("virtual_memorial_portrait_idhidden");
+    var virtual_memorial_portrait_url = document.getElementById("virtual_memorial_portrait_urlhidden");
+
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
     var inputHonoreeFullnameLabel = inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName("section-header-container")[1];
     var honoreeFullname = null;
     var initialLabelValue = document.getElementById("tribute_honoree_label").value;
+    
+
 
     if (GetURLParameter("fullName") != null )
     {
-        console.log("------> Parameters Not Null");
-        honoreeFullname = decodeURI( GetURLParameter("fullName") );
+        //console.log("------> Parameters Not Null");
+        honoreeFullname = decodeURI(GetURLParameter("fullName"));
+
+        virtual_memorial_portrait_id.value = (GetURLParameter("portrait_id") != null) ? GetURLParameter("portrait_id") : null;
+        virtual_memorial_portrait_url.value = (GetURLParameter("portrait_url") != null) ? decodeURI(GetURLParameter("portrait_url")) : null;
     }
 
     if ( honoreeFullname != null && honoreeFullname.length > 0 ) {
