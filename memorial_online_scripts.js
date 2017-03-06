@@ -46,9 +46,9 @@ function initiate() {
     var virtual_memorial_portrait_url = document.getElementById("virtual_memorial_portrait_urlhidden");
 
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
-    var inputHonoreeFullnameLabel = inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName("section-header-container")[1];
+    var inputHonoreeFullnameLabel = (inputHonoreeFullname!=null)? inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName("section-header-container")[1] : null ;
     var honoreeFullname = null;
-    var initialLabelValue = document.getElementById("tribute_honoree_label").value;
+    var initialLabelValue = (document.getElementById("tribute_honoree_label")!=null)? document.getElementById("tribute_honoree_label").value : null ;
     
 
 
