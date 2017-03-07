@@ -64,7 +64,7 @@ function initiate() {
         virtual_memorial_portrait_url.value = (GetURLParameter("portrait_url") != null) ? decodeURIComponent(GetURLParameter("portrait_url")) : null;
 
         virtual_memorial_portrait_id_2.value = virtual_memorial_portrait_id.value;
-        virtual_memorial_api_url.value = (GetURLParameter("api_url") != null) ? GetURLParameter("api_url") : null;
+        virtual_memorial_api_url.value = (GetURLParameter("api_url") != null) ? decodeURIComponent(GetURLParameter("api_url")) : null;
     }
 
     if ( honoreeFullname != null && honoreeFullname.length > 0 ) {
