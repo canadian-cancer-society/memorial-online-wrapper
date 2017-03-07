@@ -46,7 +46,7 @@ function initiate() {
     var virtual_memorial_portrait_url   = document.getElementById("virtual_memorial_portrait_urlhidden");
 
     var virtual_memorial_portrait_id_2  = document.getElementById("honoree_titlehidden");
-    var virtual_memorial_api_url        = document.getElementById("tribute_honoree_first_namehidden");
+    //var virtual_memorial_api_url        = document.getElementById("tribute_honoree_first_namehidden");
 
     var inputHonoreeFullname = document.getElementById("tribute_honoree_namename");
     var inputHonoreeFullnameLabel = (inputHonoreeFullname!=null)? inputHonoreeFullname.parentNode.parentNode.parentNode.getElementsByClassName("section-header-container")[1] : null ;
@@ -63,8 +63,8 @@ function initiate() {
         virtual_memorial_portrait_id.value = (GetURLParameter("portrait_id") != null) ? GetURLParameter("portrait_id") : null;
         virtual_memorial_portrait_url.value = (GetURLParameter("portrait_url") != null) ? decodeURIComponent(GetURLParameter("portrait_url")) : null;
 
-        virtual_memorial_portrait_id_2.value = virtual_memorial_portrait_id.value;
-        virtual_memorial_api_url.value = (GetURLParameter("api_url") != null) ? decodeURIComponent(GetURLParameter("api_url")) : null;
+        virtual_memorial_portrait_id_2.value = virtual_memorial_portrait_id.value + ',' + (GetURLParameter("api_url") != null) ? decodeURIComponent(GetURLParameter("api_url")) : null;
+        //virtual_memorial_api_url.value = (GetURLParameter("api_url") != null) ? decodeURIComponent(GetURLParameter("api_url")) : null;
     }
 
     if ( honoreeFullname != null && honoreeFullname.length > 0 ) {
@@ -73,8 +73,7 @@ function initiate() {
 
             inputHonoreeFullname.value = honoreeFullname;
             inputHonoreeFullname.style.display = "none";
-            /////////////////////
-            console.log("------> Input Not Null");
+            //console.log("------> Input Not Null");
         }
 
         if (inputHonoreeFullnameLabel != null) {
